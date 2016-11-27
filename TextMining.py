@@ -4,6 +4,7 @@ import re
 import nltk
 from nltk.corpus import stopwords 
 from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 # Dictionary to store the data; source is the key
 data = {}
@@ -42,7 +43,7 @@ print data['bbc'][:800]
 
 # Removing stopwords
 
-print "Processing to remove stop words"
+print "Processing to remove stop words..."
 
 for k in data.keys():
 	data[k] = data[k].split()
@@ -56,3 +57,9 @@ for k in data.keys():
 print data['bbc'][:80]
 
 # Creating a wordcloud
+wordcloud = WordCloud(width = 1000, height = 500).generate(' '.join(data['bbc']))
+plt.figure(figsize = (15, 8))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show()
+

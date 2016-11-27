@@ -1,6 +1,6 @@
 # UnstructuredTextAnalysis
 
-Alt-Part 1 - Preprocessing the data
+## Part 1 - Preprocessing the data
 ### Steps involved
 * Removing punctuation
 * Removing numbers
