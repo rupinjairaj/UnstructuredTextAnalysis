@@ -57,9 +57,30 @@ for k in data.keys():
 print data['bbc'][:80]
 
 # Creating a wordcloud
+## wordcloud for BBC
 wordcloud = WordCloud(width = 1000, height = 500).generate(' '.join(data['bbc']))
 plt.figure(figsize = (15, 8))
 plt.imshow(wordcloud)
 plt.axis("off")
 plt.show()
 
+## wordcloud for Forbes
+wordcloud = WordCloud(width = 1000, height = 500).generate(' '.join(data['forbes']))
+plt.figure(figsize = (15, 8))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show()
+
+## wordcloud for Guardian
+wordcloud = WordCloud(width = 1000, height = 500).generate(' '.join(data['guardian']))
+plt.figure(figsize = (15, 8))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show()
+
+## wordcloud for Moviepilot
+wordcloud = WordCloud(width = 1000, height = 500).generate(' '.join(data['moviepilot']))
+plt.figure(figsize = (15, 8))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show()
