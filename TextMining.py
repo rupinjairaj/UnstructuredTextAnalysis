@@ -98,3 +98,9 @@ print word_data[:15]
 ## sentence tokenization
 print "Processing for sentence tokenization..."
 print sent_tokenize(data)[:5]
+
+# Parts of speech tagging
+
+print "Processing data to tag parts of speech"
+pos_word_data = nltk.pos_tag(word_data)
+print pos_word_data
