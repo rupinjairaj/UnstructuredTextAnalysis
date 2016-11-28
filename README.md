@@ -6,6 +6,8 @@
 * Removing numbers
 * Converting text to lower case
 * Removing stop words
+
+**NOTE**
 > download the 'stopwords' package from nltk.download()
 
 ## Part 2 - WordCloud on the dataset
@@ -17,6 +19,8 @@
 ### Steps involved
 * Word tokenization is done with 'word_tokenize' module in the nltk package
 * Sentence tokenization is done with 'sent_tokenize' module in the nltk.tokenize package
+
+**NOTE**
 > download the 'punkt' package from nltk.download()
 
 ## Part 4 - Tagging parts of speech
