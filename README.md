@@ -8,7 +8,7 @@
 * Removing stop words
 
 **NOTE**
-> download the 'stopwords' package from nltk.download()
+> download the 'stopwords' package via nltk.download()
 
 ## Part 2 - WordCloud on the dataset
 ### Steps involved
@@ -21,13 +21,18 @@
 * Sentence tokenization is done with 'sent_tokenize' module in the nltk.tokenize package
 
 **NOTE**
-> download the 'punkt' package from nltk.download()
+> download the 'punkt' package via nltk.download()
 
 ## Part 4 - Tagging parts of speech
 ### Steps involved
+* This part is achieved using the pos_tag() function in the nltk package
 
 ## Part 5 - Stemming and lemmatization
 ### Steps involved
+* This step was done using the 'pos_tag' function in the nltk module
 
+**NOTE**
+>download the 'averaged_perceptron_tagger' via nltk.download()
+ 
 ## Part 6 - Applying Stanford Named Entity Recognizer
 ### Steps involved
