@@ -5,6 +5,8 @@ import nltk
 from nltk.corpus import stopwords 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from nltk import word_tokenize
+from nltk.tokenize import sent_tokenize
 
 # Dictionary to store the data; source is the key
 data = {}
@@ -84,3 +86,15 @@ plt.figure(figsize = (15, 8))
 plt.imshow(wordcloud)
 plt.axis("off")
 plt.show()
+
+# Word and Sentence tokenize
+
+## Loading the forbes data
+print "Processing for word tokenization..."
+data = open('./Data/madmax_review/forbes.txt', 'r').read()
+word_data = nltk.word_tokenize(data)
+print word_data[:15] 
+
+## sentence tokenization
+print "Processing for sentence tokenization..."
+print sent_tokenize(data)[:5]
