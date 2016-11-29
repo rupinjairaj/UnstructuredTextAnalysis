@@ -7,6 +7,10 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from nltk import word_tokenize
 from nltk.tokenize import sent_tokenize
+from nltk.stem.porter import PorterStemmer
+from nltk.stem.lancaster import LancasterStemmer
+from nltk.stem.snowball import SnowballStemmer
+from nltk.stem import WordNetLemmatizer
 
 # Dictionary to store the data; source is the key
 data = {}
@@ -101,6 +105,32 @@ print sent_tokenize(data)[:5]
 
 # Parts of speech tagging
 
-print "Processing data to tag parts of speech"
+print "Processing data to tag parts of speech..."
 pos_word_data = nltk.pos_tag(word_data)
 print pos_word_data
+
+# Stemming and Lemmatization
+
+## Stemming with Porter Stemmer
+print "Stemming with Porter Stemmer..."
+porter_stemmer = PorterStemmer()
+for w in word_data[:20]:
+	print "Actual: %s Stem: %s" % (w, porter_stemmer.stem(w))
+
+## Stemming with Lancaster Stemmer
+print "Stemming with Porter Stemmer..."
+lancaster_stemmer = LancasterStemmer()
+for w in word_data[:20]:
+	print "Actual: %s Stem: %s" % (w, lancaster_stemmer.stem(w))
+
+## Stemming with Snowball Algorithm
+print "Stemming with Snowball Stemmer..."
+snowball_stemmer = SnowballStemmer("english")
+for w in word_data[:20]:
+	print "Actual: %s Stem: %s" % (w, snowball_stemmer.stem(w))
+
+## Lemmatization with WordNet
+wordnet_lemmatizer = WordNetLemmatizer()
+for w in word_data[:20]:
+	print "Actual: %s Stem: %s" % (w, wordnet_lemmatizer.stem(w))	
+
