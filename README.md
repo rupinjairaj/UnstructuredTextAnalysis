@@ -30,6 +30,8 @@
 ## Part 5 - Stemming and lemmatization
 ### Steps involved
 * This step was done using the 'pos_tag' function in the nltk module
+* Stemming tried with 3 different algorithms- Snowball, Porter and Lancaster
+* Lemmatization tried with WordNet 
 
 **NOTE**
 >download the 'averaged_perceptron_tagger' via nltk.download()
